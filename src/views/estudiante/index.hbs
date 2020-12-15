@@ -1,0 +1,104 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-5 mx-auto">
+            <div class="card ">
+                <div class="card-body">
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-success btn-lg btn-block" data-toggle="modal"
+                        data-target="#agregarModal">
+                        Agregar Solicitud
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="agregarModal" tabindex="-1" aria-labelledby="agregarModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Solicitud De Grado</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <form action="/estudiante/registrar" method="POST">
+
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="nombre"
+                                                placeholder="Inserte Nombre Completo" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="apellido"
+                                                placeholder="Inserte Apellidos Completos" required>
+                                        </div>
+
+                                        <label>Tipo de documento:</label>
+
+                                       <select name="id_doc"class="form-control form-control-sm">
+                                            <option value="1">CC</option>
+                                            <option value="2">CE</option>
+                                        </select>
+
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="numero_doc"
+                                                placeholder="Inserte Número de Documento" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="lugar_exped"
+                                                placeholder="Inserte Lugar de Expedición" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="codigo_estud"
+                                                placeholder="Inserte Codigo Estudiantil" required>
+                                        </div>
+
+                                        <label>Solicito a usted el grado de:</label>
+
+                                        <select name="id_ciclo"class="form-control form-control-sm">
+                                            <option value="1">Técnico Profesional</option>
+                                            <option value="2">Tecnológico</option>
+                                            <option value="3">Profesional</option>
+                                        </select>
+
+                                        <label>En (Programa académico culminado):</label>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="programa_acad"
+                                                placeholder="Inserte Programa Académico Culminado" required>
+                                        </div>
+
+                                        <label>El último Semestre lo curse en:</label>
+
+                                    <select name="id_periodo"class="form-control form-control-sm">
+                                            <option value="1">Periodo A (Enero - Junio)</option>
+                                            <option value="2">Periodo B (Julio - Diciembre)</option>
+                                        </select>
+
+                                        <label>Modalidad de grado:</label>
+
+                                        <select name="id_modalidad"class="form-control form-control-sm">
+                                            <option value="1">Pr</option>
+                                           
+                                        </select>
+
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn btn-primary">Enviar</button>
+                                        </div>
+
+                                    </form>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

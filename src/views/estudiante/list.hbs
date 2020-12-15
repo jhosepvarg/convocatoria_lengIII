@@ -1,0 +1,19 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+       <th scope="col">Estado</th>
+      <th scope="col">Ciclo</th>
+      <th scope="col">Fecha Postulación</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each registro}}
+    <tr>
+     
+      <td>{{estado}}</td>
+      <td>{{ciclo}}</td>
+      <td>{{fecha}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
